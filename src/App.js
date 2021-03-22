@@ -18,6 +18,7 @@ class App extends router(LitElement) {
 			route: { type: String },
 			params: { type: Object },
 			query: { type: Object },
+			data: { type: String },
 		};
 	}
 
@@ -31,6 +32,7 @@ class App extends router(LitElement) {
 			{
 				name: "banking",
 				pattern: "banking",
+				data: { title: "Igapäevapangandus" },
 			},
 			{
 				name: "not-found",
@@ -50,13 +52,14 @@ class App extends router(LitElement) {
 		this.route = route;
 		this.params = params;
 		this.query = query;
+		this.data = data;
 		console.log(route, params, query, data);
 	}
 
 	render() {
 		return html`
 			<app-header></app-header>
-
+			<h1>${this.data.title}</h1>
 			<router-outlet active-route=${this.route}>
 				<home-page route="home"></home-page>
 				<banking-page route="banking"></banking-page>
