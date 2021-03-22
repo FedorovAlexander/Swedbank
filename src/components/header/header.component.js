@@ -195,6 +195,9 @@ export class Header extends LitElement {
 		let activeEl = target.parentNode.querySelector(".active");
 		activeEl.classList.remove("active");
 		target.classList.add("active");
+		if (this.isMobile) {
+			this._toggleMenu();
+		}
 	}
 }
 
