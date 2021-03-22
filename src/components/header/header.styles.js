@@ -61,7 +61,7 @@ export const HeaderStyles = css`
 		align-items: center;
 		flex: 1;
 		text-align: center;
-		color: #9c6c77;
+		color: #000000;
 		font-weight: 500;
 		border-top: 2px solid #f1eeeb;
 		transition: color 0.1s linear, border-top 0.1s linear;
