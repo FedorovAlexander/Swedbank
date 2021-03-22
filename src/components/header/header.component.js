@@ -16,6 +16,7 @@ export class Header extends LitElement {
 			showOverlay: false,
 			showMenu: false,
 			isMobile: { type: Boolean },
+			activeRoute: { type: String },
 		};
 	}
 
@@ -28,6 +29,7 @@ export class Header extends LitElement {
 		this.menuItems = [MenuItems.HOME, MenuItems.EVERYDAY_BANKING];
 		this.showOverlay = false;
 		this.isMobile = window.innerWidth > 767 ? false : true;
+		this.activeRoute = "";
 	}
 
 	render() {
@@ -58,7 +60,9 @@ export class Header extends LitElement {
 				>
 					<ul class="header__menu-list">
 						<li
-							class="header__menu-item active"
+							class="${this.activeRoute === "home"
+								? "header__menu-item active"
+								: "header__menu-item"}"
 							@mouseenter=${this._toggleOverlayOnHover}
 							@mouseleave=${this._toggleOverlayOnHover}
 							@click=${this._clickMenuItem}
@@ -109,7 +113,9 @@ export class Header extends LitElement {
 							</nav-link>
 						</li>
 						<li
-							class="header__menu-item"
+							class="${this.activeRoute === "banking"
+								? "header__menu-item active"
+								: "header__menu-item"}"
 							@mouseenter=${this._toggleOverlayOnHover}
 							@mouseleave=${this._toggleOverlayOnHover}
 							@click=${this._clickMenuItem}
@@ -191,10 +197,6 @@ export class Header extends LitElement {
 	}
 
 	_clickMenuItem(e) {
-		let target = e.target.parentNode;
-		let activeEl = target.parentNode.querySelector(".active");
-		activeEl.classList.remove("active");
-		target.classList.add("active");
 		if (this.isMobile) {
 			this._toggleMenu();
 		}
