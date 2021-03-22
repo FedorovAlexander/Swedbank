@@ -76,6 +76,11 @@ export const HeaderStyles = css`
 		border-top: 2px solid #ee7429;
 	}
 
+	.header__menu-item.active {
+		color: #ee7429;
+		border-top: 2px solid #ee7429;
+	}
+
 	.header__menu-item #home-icon,
 	.header__menu-item #banking-icon {
 		fill: #512b2b;
@@ -85,6 +90,15 @@ export const HeaderStyles = css`
 	.header__menu-item:hover #home-icon,
 	.header__menu-item:hover #banking-icon {
 		fill: #ee7429;
+	}
+
+	.header__menu-item.active #home-icon,
+	.header__menu-item.active #banking-icon {
+		fill: #ee7429;
+	}
+
+	.header__menu-icon {
+		pointer-events: none;
 	}
 
 	.header__burger-icon {
@@ -132,7 +146,7 @@ export const HeaderStyles = css`
 	#nav-icon span {
 		display: block;
 		position: absolute;
-		height: 3px;
+		height: 0.1875rem;
 		width: 100%;
 		background: #9c6c77;
 		border-radius: 3px;
@@ -187,10 +201,10 @@ export const HeaderStyles = css`
 		left: 50%;
 	}
 
-	@media screen and (max-width: 767px) {
+	@media screen and (max-width: 47.9375rem) {
 		.header__menu-block {
 			position: absolute;
-			top: 65px;
+			top: 4.0625rem;
 			left: 0px;
 			background-color: #fff;
 		}

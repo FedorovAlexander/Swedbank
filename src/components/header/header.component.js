@@ -58,9 +58,10 @@ export class Header extends LitElement {
 				>
 					<ul class="header__menu-list">
 						<li
-							class="header__menu-item"
+							class="header__menu-item active"
 							@mouseenter=${this._toggleOverlayOnHover}
 							@mouseleave=${this._toggleOverlayOnHover}
+							@click=${this._clickMenuItem}
 						>
 							<nav-link href="/">
 								<span class="header__menu-icon">
@@ -111,6 +112,7 @@ export class Header extends LitElement {
 							class="header__menu-item"
 							@mouseenter=${this._toggleOverlayOnHover}
 							@mouseleave=${this._toggleOverlayOnHover}
+							@click=${this._clickMenuItem}
 						>
 							<nav-link href="/banking">
 								<span class="header__menu-icon">
@@ -186,6 +188,13 @@ export class Header extends LitElement {
 		menuIcon.classList.toggle("open");
 		this.showOverlay = !this.showOverlay;
 		this.showMenu = !this.showMenu;
+	}
+
+	_clickMenuItem(e) {
+		let target = e.target.parentNode;
+		let activeEl = target.parentNode.querySelector(".active");
+		activeEl.classList.remove("active");
+		target.classList.add("active");
 	}
 }
 
