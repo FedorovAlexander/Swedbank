@@ -72,13 +72,13 @@ export const HeaderStyles = css`
 	}
 
 	.header__menu-item:hover {
-		color: #ee7429;
-		border-top: 2px solid #ee7429;
+		color: #ee7023;
+		border-top: 2px solid #ee7023;
 	}
 
 	.header__menu-item.active {
-		color: #ee7429;
-		border-top: 2px solid #ee7429;
+		color: #ee7023;
+		border-top: 2px solid #ee7023;
 	}
 
 	.header__menu-item #home-icon,
@@ -89,12 +89,12 @@ export const HeaderStyles = css`
 
 	.header__menu-item:hover #home-icon,
 	.header__menu-item:hover #banking-icon {
-		fill: #ee7429;
+		fill: #ee7023;
 	}
 
 	.header__menu-item.active #home-icon,
 	.header__menu-item.active #banking-icon {
-		fill: #ee7429;
+		fill: #ee7023;
 	}
 
 	.header__menu-icon {
