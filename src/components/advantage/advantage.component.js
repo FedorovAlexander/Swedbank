@@ -21,13 +21,23 @@ class Advantage extends LitElement {
 	render() {
 		return html`
 			<article class="advantage">
+				<!-- for the sake of ability to style header pseudoelement -->
+				<style>
+					.advantage__header:after {
+						border-top: 16px solid ${this.headerBackgroundColor};
+					}
+				</style>
+				<!-- end -->
+
 				<header
 					class="advantage__header"
 					style="background-color: ${this.headerBackgroundColor}"
 				>
 					${this.headerTitle}
 				</header>
-				<slot></slot>
+				<div class="advantage__content">
+					<slot></slot>
+				</div>
 			</article>
 		`;
 	}

@@ -15,16 +15,10 @@ class Home extends LitElement {
 			data: {
 				type: String,
 			},
-			advantagesProperties: { type: Array },
 		};
 	}
 	constructor() {
 		super();
-		this.advantagesProperties = [
-			{ title: "Open", backgroundColor: "#5B8AD6" },
-			{ title: "Caring", backgroundColor: "#F4BA44" },
-			{ title: "Simple", backgroundColor: "#C5569A" },
-		];
 	}
 
 	render() {
@@ -33,21 +27,33 @@ class Home extends LitElement {
 				<div class="home-page__wrapper">
 					<app-table></app-table>
 					<section class="home-page__advantages-list">
-						<app-advantage
-							.headerBackgroundColor="${this.advantagesProperties[0]
-								.backgroundColor}"
-							.headerTitle="${this.advantagesProperties[0].title}"
-						></app-advantage>
-						<app-advantage
-							.headerBackgroundColor="${this.advantagesProperties[1]
-								.backgroundColor}"
-							.headerTitle="${this.advantagesProperties[1].title}"
-						></app-advantage>
-						<app-advantage
-							.headerBackgroundColor="${this.advantagesProperties[2]
-								.backgroundColor}"
-							.headerTitle="${this.advantagesProperties[2].title}"
-						></app-advantage>
+						<app-advantage headerBackgroundColor="#5B8AD6" headerTitle="Open">
+							<h3 class="home-page__advantage-title">
+								One of the core values of Swedbank
+							</h3>
+							<p class="home-page__advantage-text">
+								Lorem ipsum dolor sit amet, consectetur adip
+							</p>
+						</app-advantage>
+
+						<app-advantage headerBackgroundColor="#F4BA44" headerTitle="Caring">
+							<p class="home-page__advantage-text">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+								eiusmod tempor incididunt ut labore
+							</p>
+							<a class="home-page__advantage-link">Read more</a>
+						</app-advantage>
+
+						<app-advantage headerBackgroundColor="#C5569A" headerTitle="Simple">
+							<ul class="home-page__advantage-list">
+								<li class="home-page__advantage-list-item">
+									Lorem ipsum dolor sit amet
+								</li>
+								<li class="home-page__advantage-list-item">
+									Lorem ipsum dolor sit amet
+								</li>
+							</ul>
+						</app-advantage>
 					</section>
 				</div>
 			</section>
