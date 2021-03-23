@@ -21,7 +21,7 @@ export const HomePageStyles = css`
 		justify-content: space-between;
 		box-sizing: border-box;
 		width: 100%;
-		max-width: 1536px;
+		max-width: 1556px;
 		background-color: #fff;
 		border-radius: 3px;
 		margin-top: 0.625rem;
@@ -50,6 +50,10 @@ export const HomePageStyles = css`
 		margin-top: 0.5rem;
 		padding-left: 0.5rem;
 		cursor: pointer;
+	}
+
+	.home-page__advantage-link:hover {
+		text-decoration: none;
 	}
 
 	.home-page__advantage-link:before {

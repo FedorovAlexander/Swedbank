@@ -23,7 +23,7 @@ class Home extends LitElement {
 
 	render() {
 		return html`
-			<section class="home-page">
+			<div class="home-page">
 				<div class="home-page__wrapper">
 					<app-table></app-table>
 					<section class="home-page__advantages-list">
@@ -41,7 +41,7 @@ class Home extends LitElement {
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 								eiusmod tempor incididunt ut labore
 							</p>
-							<a class="home-page__advantage-link">Read more</a>
+							<a href="#" class="home-page__advantage-link">Read more</a>
 						</app-advantage>
 
 						<app-advantage headerBackgroundColor="#C5569A" headerTitle="Simple">
@@ -56,7 +56,7 @@ class Home extends LitElement {
 						</app-advantage>
 					</section>
 				</div>
-			</section>
+			</div>
 		`;
 	}
 }
