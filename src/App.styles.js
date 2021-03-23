@@ -5,9 +5,9 @@ export const AppStyles = css`
 		font-family: "Swedbank Headline";
 		font-size: 1.625rem;
 		color: #ee7023;
-		max-width: 1496px;
+		max-width: 1526px;
 		margin: 1rem auto;
-		padding: 0 1.25rem;
+		padding: 0 1.5rem;
 	}
 
 	a {
