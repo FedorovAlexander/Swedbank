@@ -5,6 +5,7 @@ export const HomePageStyles = css`
 		display: block;
 		width: 100%;
 		padding: 0 1rem;
+		box-sizing: border-box;
 	}
 
 	.home-page__wrapper {
