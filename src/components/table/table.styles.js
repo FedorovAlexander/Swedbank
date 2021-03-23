@@ -12,6 +12,7 @@ export const TableStyles = css`
 		padding: 0 0.625rem;
 		background-color: #fff;
 		border-radius: 3px;
+		margin: 0 auto;
 	}
 
 	.table-block__wrapper {
