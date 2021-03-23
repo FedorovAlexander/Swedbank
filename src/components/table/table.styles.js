@@ -48,7 +48,7 @@ export const TableStyles = css`
 		align-items: center;
 		padding-left: 0;
 		list-style: none;
-		font-family: Arial;
+		font-family: var(--font-main);
 		font-size: 0.75rem;
 	}
 
@@ -73,7 +73,7 @@ export const TableStyles = css`
 
 	.table {
 		width: 100%;
-		font-family: Arial;
+		font-family: var(--font-main);
 		border-collapse: collapse;
 	}
 
@@ -100,7 +100,7 @@ export const TableStyles = css`
 	}
 
 	.table__row--total .table__cell--total-available {
-		font-family: "Swedbank Sans";
+		font-family: var(--font-titles);
 		font-size: 1.25rem;
 		font-weight: 400;
 	}
