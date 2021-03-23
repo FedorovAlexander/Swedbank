@@ -87,4 +87,10 @@ export const HomePageStyles = css`
 		border-radius: 0 10px 10px 0;
 		background: #c5569a;
 	}
+
+	@media screen and (max-width: 767px) {
+		.home-page__advantages-list {
+			flex-direction: column;
+		}
+	}
 `;

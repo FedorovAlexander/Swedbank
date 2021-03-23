@@ -8,8 +8,11 @@ export const AdvantageStyles = css`
 	}
 
 	.advantage {
+		display: flex;
+		flex-direction: column;
 		flex: 1;
 		font-family: var(--font-main);
+		height: 100%;
 	}
 
 	.advantage__header {
@@ -17,6 +20,8 @@ export const AdvantageStyles = css`
 		color: #fff;
 		font-weight: bold;
 		padding: 0.75rem 0.625rem;
+		flex: 1;
+		flex-grow: 0;
 	}
 
 	.advantage__header:after {
@@ -32,8 +37,15 @@ export const AdvantageStyles = css`
 	}
 
 	.advantage__content {
-		padding: 1.75rem 0.625rem 0.75rem;
+		padding: 1.5rem 0.625rem 0.75rem;
 		background-color: #fbf2ea;
 		min-height: 70px;
+		flex: 1;
+	}
+
+	@media screen and (max-width: 767px) {
+		:host {
+			margin-bottom: 0.625rem;
+		}
 	}
 `;
