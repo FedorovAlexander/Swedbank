@@ -8,9 +8,16 @@ export const AppStyles = css`
 		max-width: 1526px;
 		margin: 1rem auto;
 		padding: 0 1.5rem;
+		width: 100%;
 	}
 
 	a {
 		color: var(--link-color);
+	}
+
+	.app-container {
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
 	}
 `;

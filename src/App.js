@@ -1,3 +1,4 @@
+import './components/footer/footer.component';
 import './components/header/header.component';
 import './components/navigation/nav-link.component';
 import './pages/banking/banking.page';
@@ -58,13 +59,16 @@ class App extends router(LitElement) {
 
 	render() {
 		return html`
-			<app-header .activeRoute="${this.route}"></app-header>
-			<h1>${this.data.title}</h1>
-			<router-outlet active-route=${this.route}>
-				<home-page route="home"></home-page>
-				<banking-page route="banking"></banking-page>
-				<h1 route="not-found">Not Found</h1>
-			</router-outlet>
+			<div class="app-container">
+				<app-header .activeRoute="${this.route}"></app-header>
+				<h1>${this.data.title}</h1>
+				<router-outlet active-route=${this.route}>
+					<home-page route="home"></home-page>
+					<banking-page route="banking"></banking-page>
+					<h1 route="not-found">Not Found</h1>
+				</router-outlet>
+				<app-footer></app-footer>
+			</div>
 		`;
 	}
 }
