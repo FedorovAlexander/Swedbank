@@ -37,7 +37,6 @@ export const HeaderStyles = css`
 	.header__menu-block {
 		display: flex;
 		width: 100%;
-		max-width: 96rem;
 		margin: 0 auto;
 	}
 
@@ -222,6 +221,12 @@ export const HeaderStyles = css`
 
 		.header__menu-icon {
 			display: none;
+		}
+	}
+
+	@media (hover: none) and (pointer: coarse) and (min-width: 768px) {
+		#overlay {
+			display: none !important;
 		}
 	}
 `;
