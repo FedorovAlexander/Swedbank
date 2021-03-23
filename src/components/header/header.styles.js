@@ -12,7 +12,7 @@ export const HeaderStyles = css`
 		position: relative;
 		margin: 0 auto;
 		background-color: #fff;
-		font-family: "Swedbank Sans";
+		font-family: var(--font-titles);
 		font-weight: 400;
 		z-index: 200;
 	}
@@ -71,13 +71,13 @@ export const HeaderStyles = css`
 	}
 
 	.header__menu-item:hover {
-		color: #ee7023;
-		border-top: 2px solid #ee7023;
+		color: var(--brand-orange);
+		border-top: 2px solid var(--brand-orange);
 	}
 
 	.header__menu-item.active {
-		color: #ee7023;
-		border-top: 2px solid #ee7023;
+		color: var(--brand-orange);
+		border-top: 2px solid var(--brand-orange);
 	}
 
 	.header__menu-item #home-icon,
@@ -88,12 +88,12 @@ export const HeaderStyles = css`
 
 	.header__menu-item:hover #home-icon,
 	.header__menu-item:hover #banking-icon {
-		fill: #ee7023;
+		fill: var(--brand-orange);
 	}
 
 	.header__menu-item.active #home-icon,
 	.header__menu-item.active #banking-icon {
-		fill: #ee7023;
+		fill: var(--brand-orange);
 	}
 
 	.header__menu-icon {
@@ -147,7 +147,7 @@ export const HeaderStyles = css`
 		position: absolute;
 		height: 0.1875rem;
 		width: 100%;
-		background: #9c6c77;
+		background: #512b2b;
 		border-radius: 3px;
 		opacity: 1;
 		left: 0;
