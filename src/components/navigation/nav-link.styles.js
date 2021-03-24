@@ -6,6 +6,7 @@ export const NavLinkStyles = css`
 		width: 100%;
 		padding: 0.5rem 0px;
 	}
+
 	.nav-link {
 		display: flex;
 		flex-direction: column;
@@ -16,6 +17,7 @@ export const NavLinkStyles = css`
 		width: 100%;
 		text-align: center;
 	}
+
 	.nav-link:hover {
 		color: inherit;
 	}
