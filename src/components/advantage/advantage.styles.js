@@ -24,8 +24,7 @@ export const AdvantageStyles = css`
 		flex-grow: 0;
 	}
 
-	.advantage__header:after {
-		content: "";
+	.advantage__header-decorator {
 		display: block;
 		position: absolute;
 		bottom: -15px;
