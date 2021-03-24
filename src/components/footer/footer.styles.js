@@ -141,6 +141,21 @@ export const FooterStyles = css`
 		background-repeat: no-repeat;
 	}
 
+	.footer__disclaimer {
+		background-color: #ffffff;
+		padding: 1.5rem 0;
+	}
+
+	.footer__disclaimer-text {
+		font-family: "Arial";
+		font-size: 0.8125rem;
+		color: gray;
+		text-align: center;
+		line-height: 1.3;
+		max-width: 60.625rem;
+		margin: 0 auto;
+	}
+
 	@media screen and (max-width: 767px) {
 		.footer {
 			padding: 0;
