@@ -11,10 +11,13 @@ class Footer extends LitElement {
 			footerLinks: { type: Array },
 			contacts: { type: Object },
 			socialMedia: { type: Array },
+			isMobile: { type: Boolean },
 		};
 	}
 	constructor() {
 		super();
+		this.isMobile = window.innerWidth > 767 ? false : true;
+
 		this.footerLinks = [
 			{
 				title: "Quicklinks",
@@ -75,7 +78,7 @@ class Footer extends LitElement {
 				<div class="footer__wrapper">
 					<div class="footer__contacts">
 						<h3 class="footer__title footer__title--contact">Contact</h3>
-						<ul class="footer__list">
+						<ul class="footer__list footer__list--contacts">
 							<li class="footer__contacts-item">
 								<a
 									href="tel:+372${this.contacts.phoneNumber}"
@@ -123,9 +126,14 @@ class Footer extends LitElement {
 					<div class="footer__links-block">
 						${this.footerLinks.map(
 							(item) => html`
-								<div class="footer__links-section">
-									<h3 class="footer__title">${item.title}</h3>
-									<ul class="footer__list">
+								<div
+									class="footer__links-section"
+									@click=${this._toggleLinksList}
+								>
+									<h3 class="footer__title footer__title--list">
+										${item.title}
+									</h3>
+									<ul class="footer__list footer__list--links">
 										${item.linksList.map(
 											(item) => html`<li class="footer__link">
 												<nav-link href="${item.href}">
@@ -141,6 +149,17 @@ class Footer extends LitElement {
 				</div>
 			</footer>
 		`;
+	}
+
+	_toggleLinksList(e) {
+		if (this.isMobile) {
+			let target = e.target;
+			let openList = e.target.parentNode.querySelector(".js-show");
+			if (openList && e.target !== openList) {
+				openList.classList.remove("js-show");
+			}
+			target.classList.toggle("js-show");
+		}
 	}
 }
 
