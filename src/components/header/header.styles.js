@@ -25,7 +25,7 @@ export const HeaderStyles = css`
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background: linear-gradient(to right, #fb661d, #f4ba44);
+		background: linear-gradient(to right, var(--brand-orange), #f4ba44);
 	}
 
 	.header__logo-block-wrapper {
