@@ -1,14 +1,22 @@
-import { css, html, LitElement } from 'lit-element';
+import '../../components/tabs/tabs.component';
+
+import { html, LitElement } from 'lit-element';
+
+import { BankingPageStyles } from './banking.styles';
 
 class Banking extends LitElement {
 	static get styles() {
-		return [css``];
+		return [BankingPageStyles];
 	}
 
 	render() {
-		return html` <div>
-			<h1>This is Banking Page</h1>
-		</div>`;
+		return html`
+			<div class="banking-page">
+				<div class="banking-page__wrapper">
+					<app-tabs></app-tabs>
+				</div>
+			</div>
+		`;
 	}
 
 	static get properties() {
