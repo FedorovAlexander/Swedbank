@@ -9,6 +9,7 @@ export const AppStyles = css`
 		margin: 1rem auto;
 		padding: 0 1.5rem;
 		width: 100%;
+		box-sizing: border-box;
 	}
 
 	a {
