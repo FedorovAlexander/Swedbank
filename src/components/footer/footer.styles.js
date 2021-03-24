@@ -8,6 +8,7 @@ export const FooterStyles = css`
 	.footer {
 		position: relative;
 		background-color: #ebe7e2;
+		padding: 0 0.5em;
 	}
 
 	.footer:before {

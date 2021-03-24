@@ -25,6 +25,7 @@ export const HomePageStyles = css`
 		background-color: #fff;
 		border-radius: 3px;
 		margin-top: 0.625rem;
+		margin-bottom: 1.875rem;
 		margin-right: -0.625rem;
 		margin-left: -0.625rem;
 		padding: 1.125rem 0.375rem;
@@ -59,7 +60,7 @@ export const HomePageStyles = css`
 	.home-page__advantage-link:before {
 		content: "";
 		position: absolute;
-		top: 2px;
+		top: 1px;
 		left: 0;
 		width: 0;
 		height: 0;
@@ -72,6 +73,7 @@ export const HomePageStyles = css`
 		list-style: none;
 		padding-left: 0;
 		margin: 0;
+		margin-bottom: 1.875rem;
 		font-size: 0.75rem;
 	}
 
