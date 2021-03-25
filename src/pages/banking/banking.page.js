@@ -9,25 +9,31 @@ class Banking extends LitElement {
 		return [BankingPageStyles];
 	}
 
-	render() {
-		return html`
-			<div class="banking-page">
-				<div class="banking-page__wrapper">
-					<app-tabs></app-tabs>
-				</div>
-			</div>
-		`;
-	}
-
 	static get properties() {
 		return {
-			eg: {
-				type: String,
-			},
+			tabsList: { type: Array },
+			activeTab: { type: String },
 		};
 	}
 	constructor() {
 		super();
+		this.tabsList = ["Payment", "Calculator"];
+		this.activeTab = "Payment";
+	}
+
+	render() {
+		return html`
+			<div class="banking-page">
+				<div class="banking-page__wrapper">
+					<app-tabs .tabsList=${this.tabsList} activeTab="${this.activeTab}">
+						<!-- For new tab add new value to the array and create an html-element 
+						with a corresponding slot name (magic!). -->
+						<div slot="Payment">pay</div>
+						<div slot="Calculator">calc</div>
+					</app-tabs>
+				</div>
+			</div>
+		`;
 	}
 }
 

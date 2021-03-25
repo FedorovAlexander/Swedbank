@@ -13,7 +13,7 @@ export const TabsStyles = css`
 		padding: 0 0.625rem;
 		background-color: #fff;
 		border-radius: 3px;
-		margin: 0 auto;
+		margin: 3.5rem auto 1rem;
 	}
 
 	.tabs__wrapper {
@@ -21,6 +21,31 @@ export const TabsStyles = css`
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		position: relative;
 		padding-bottom: 2rem;
+	}
+
+	.tabs__items-list {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		position: absolute;
+		top: -4.125rem;
+		left: -0.625rem;
+		list-style: none;
+		padding-left: 0;
+	}
+
+	.tabs__item {
+		font-family: var(--font-titles);
+		font-weight: 500;
+		padding: 1rem 1.25rem;
+		background-color: #f7f5f3;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+	}
+
+	.tabs__item.active {
+		background-color: #fff;
 	}
 `;

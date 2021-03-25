@@ -10,12 +10,14 @@ class Tabs extends LitElement {
 		return {
 			isMobile: { type: Boolean },
 			tabsList: { type: Array },
+			activeTab: { type: String },
 		};
 	}
 	constructor() {
 		super();
 		this.isMobile = window.innerWidth > 767 ? false : true;
-		this.tabsList = ["Payment", "Calculator"];
+		this.tabsList = [];
+		this.activeTab = "";
 	}
 	render() {
 		return html`
@@ -23,12 +25,24 @@ class Tabs extends LitElement {
 				<div class="tabs__wrapper">
 					<ul class="tabs__items-list">
 						${this.tabsList.map(
-							(item) => html` <li class="tabs__item">${item}</li> `
+							(item) =>
+								html`
+									<li
+										class="${item === this.activeTab
+											? "tabs__item active"
+											: "tabs__item"}"
+										@click="${this._toggleTabs}"
+										data-title="${item}"
+									>
+										${item}
+									</li>
+								`
 						)}
 					</ul>
 					<div class="tabs__content">
-						<div class="tabs__payment-wrapper">payment</div>
-						<div class="tabs__calculator-wrapper">calculator</div>
+						<div class="tabs__content-wrapper">
+							<slot name="${this.activeTab}"></slot>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -36,7 +50,8 @@ class Tabs extends LitElement {
 	}
 
 	_toggleTabs(e) {
-		console.log(e);
+		let target = e.target;
+		this.activeTab = target.dataset.title;
 	}
 }
 
