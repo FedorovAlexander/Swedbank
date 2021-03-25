@@ -141,12 +141,12 @@ export const FooterStyles = css`
 		background-repeat: no-repeat;
 	}
 
-	.footer__disclaimer {
+	.footer-disclaimer {
 		background-color: #ffffff;
 		padding: 1.5rem 0;
 	}
 
-	.footer__disclaimer-text {
+	.footer-disclaimer-text {
 		font-family: "Arial";
 		font-size: 0.8125rem;
 		color: gray;
