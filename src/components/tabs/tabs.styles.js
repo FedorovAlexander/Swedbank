@@ -43,6 +43,7 @@ export const TabsStyles = css`
 		background-color: #f7f5f3;
 		border-top-left-radius: 4px;
 		border-top-right-radius: 4px;
+		cursor: pointer;
 	}
 
 	.tabs__item.active {
