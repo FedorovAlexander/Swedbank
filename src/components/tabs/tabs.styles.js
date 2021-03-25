@@ -22,7 +22,6 @@ export const TabsStyles = css`
 		justify-content: center;
 		align-items: center;
 		position: relative;
-		padding-bottom: 2rem;
 	}
 
 	.tabs__items-list {
@@ -48,5 +47,10 @@ export const TabsStyles = css`
 
 	.tabs__item.active {
 		background-color: #fff;
+	}
+
+	.tabs__content {
+		width: 100%;
+		padding: 2.5rem 1.25rem 1.25rem;
 	}
 `;
