@@ -10,10 +10,10 @@ export const PaymentFormStyles = css`
 		display: block;
 		width: 100%;
 		max-width: 1536px;
-		padding: 0 0.625rem;
 		background-color: #fff;
 		border-radius: 3px;
-		margin: 3.5rem auto 1rem;
+		margin: 0 auto;
+		box-sizing: border-box;
 	}
 
 	.payment-form__wrapper {
@@ -23,5 +23,85 @@ export const PaymentFormStyles = css`
 		align-items: center;
 		position: relative;
 		padding-bottom: 2rem;
+	}
+
+	.payment-form__form {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		max-width: 25rem;
+		width: 100%;
+		font-family: var(--font-main);
+	}
+
+	.payment-form__label {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		margin-bottom: 0.625rem;
+		font-size: 0.75rem;
+	}
+
+	.payment-form__label--amount {
+		margin-bottom: 0;
+		width: calc(100% - 90px);
+	}
+
+	.payment-form__select {
+		flex: 1;
+		height: 2rem;
+		max-width: 18.75rem;
+		background-color: #ebf8f2;
+		border: 1px solid #bcd8db;
+		border-radius: 3px;
+		font-size: 0.75rem;
+		padding-left: 0.625rem;
+	}
+
+	.payment-form__select--currency {
+		width: 5.625rem;
+	}
+
+	.payment-form__fieldset {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		border: none;
+		margin: 0;
+		padding: 0;
+		margin-bottom: 0.625rem;
+	}
+
+	.payment-form__input {
+		box-sizing: border-box;
+		height: 2rem;
+		border: 1px solid #bcd8db;
+		border-radius: 3px;
+		font-size: 0.75rem;
+		flex: 1;
+		padding-left: 0.625rem;
+	}
+
+	.payment-form__input--amount {
+		max-width: 12.5rem;
+		margin-right: 0.625rem;
+	}
+
+	.payment-form__input--description {
+		flex: 1;
+		max-width: 18.75rem;
+		box-sizing: border-box;
+	}
+
+	.payment-form__buttons {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		width: 100%;
 	}
 `;
