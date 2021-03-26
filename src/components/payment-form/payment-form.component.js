@@ -70,7 +70,9 @@ class PaymentForm extends LitElement {
 									type="text"
 									class="payment-form__input payment-form__input--amount"
 									id="amount"
-									style=${this.amountError ? "border-color: #d1434a" : ""}
+									style=${this.amountError
+										? "border-color: #d1434a"
+										: "#bcd8db"}
 								/>
 							</label>
 							<app-select
@@ -109,8 +111,6 @@ class PaymentForm extends LitElement {
 
 	submitForm(e) {
 		e.preventDefault();
-		// const form = this.shadowRoot.querySelector("#payment-form");
-		// form.submit();
 
 		const form = this.shadowRoot.querySelector("form");
 		const accountSelect = form.querySelector("app-select[name = 'Account']");
@@ -141,15 +141,21 @@ class PaymentForm extends LitElement {
 
 		if (amount.value.match(/^[0-9]+$/)) {
 			errorAmount.hidden = true;
-			this.errorError.hidden = false;
+			this.amountError = false;
 		} else {
 			errorAmount.hidden = false;
 			this.amountError = true;
 		}
 
-		console.log(amount.value.match(/^[0-9]+$/) ? true : false, "value");
-
-		console.log("submit");
+		if (
+			!accountSelect.value &&
+			!paymentSelect.value &&
+			amount.value.match(/^[0-9]+$/)
+		) {
+			const form = this.shadowRoot.querySelector("#payment-form");
+			form.submit();
+			console.log("submit");
+		}
 	}
 
 	savePayment(e) {
