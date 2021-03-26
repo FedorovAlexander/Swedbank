@@ -11,6 +11,10 @@ class Select extends LitElement {
 			isMobile: { type: Boolean },
 			options: { type: Array },
 			name: { type: String },
+			value: { type: String },
+			placeholder: { type: String },
+			error: { type: Boolean },
+			firstOptionSelected: { type: Boolean },
 		};
 	}
 	constructor() {
@@ -18,17 +22,30 @@ class Select extends LitElement {
 		this.isMobile = window.innerWidth > 767 ? false : true;
 		this.options = [];
 		this.name = "";
+		this.value = this.options.length ? this.options[0] : "";
+		this.placeholder = "";
+		this.error = false;
+		this.firstOptionSelected = false;
 	}
 	render() {
 		return html`
-			<select name="${this.name}" class="select">
+			<select
+				name="${this.name}"
+				class="select"
+				value="${this.value}"
+				@change=${this._selectChange}
+				style=${this.error ? "border-color: #d1434a" : ""}
+			>
+				<option selected disabled ?hidden=${this.firstOptionSelected}>
+					${this.placeholder}
+				</option>
 				${this.options.map(
-					(item, index) =>
+					(item) =>
 						html`
 							<option
 								class="payment-form__option"
 								value="${item}"
-								?selected=${index[0]}
+								?selected=${this.firstOptionSelected}
 							>
 								<span class="payment-form__option-content">${item}</span>
 							</option>
@@ -36,6 +53,11 @@ class Select extends LitElement {
 				)}
 			</select>
 		`;
+	}
+
+	_selectChange() {
+		let select = this.shadowRoot.querySelector("select");
+		this.value = select.value;
 	}
 }
 

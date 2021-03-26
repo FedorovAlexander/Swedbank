@@ -104,6 +104,19 @@ export const PaymentFormStyles = css`
 		box-sizing: border-box;
 	}
 
+	.payment-form__error-message {
+		color: #d1434a;
+		margin-bottom: 0.625rem;
+		font-size: 0.75rem;
+		position: relative;
+		top: -0.625rem;
+		left: 0.625rem;
+		width: 100%;
+		text-align: left;
+		max-width: 18.75rem;
+		align-self: flex-end;
+	}
+
 	.payment-form__buttons {
 		display: flex;
 		flex-direction: row;
