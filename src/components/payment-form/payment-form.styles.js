@@ -1,4 +1,4 @@
-import { css } from 'lit-element';
+import { css } from "lit-element";
 
 export const PaymentFormStyles = css`
 	:host {
@@ -75,6 +75,12 @@ export const PaymentFormStyles = css`
 		margin: 0;
 		padding: 0;
 		margin-bottom: 0.625rem;
+	}
+
+	.payment-form__option-content {
+		border: none;
+		padding-left: 0.625rem;
+		height: 2rem;
 	}
 
 	.payment-form__input {
