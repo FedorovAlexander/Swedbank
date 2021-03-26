@@ -72,7 +72,7 @@ class PaymentForm extends LitElement {
 									id="amount"
 									style=${this.amountError
 										? "border-color: #d1434a"
-										: "#bcd8db"}
+										: "border-color:#bcd8db"}
 								/>
 							</label>
 							<app-select
@@ -84,7 +84,7 @@ class PaymentForm extends LitElement {
 						<span id="error-amount" class="payment-form__error-message" hidden
 							>Amount accepts only numbers</span
 						>
-						<label class="payment-form__label">
+						<label class="payment-form__label payment-form__label--description">
 							Description
 							<input
 								type="text"

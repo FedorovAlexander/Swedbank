@@ -9,5 +9,12 @@ export const ButtonStyles = css`
 		margin-left: 0.625rem;
 		padding: 0.5rem 1rem;
 		display: block;
+		border: 1px solid;
+	}
+
+	.button--mobile {
+		width: 100%;
+		margin-left: 0;
+		margin-bottom: 0.625rem;
 	}
 `;

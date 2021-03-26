@@ -41,4 +41,10 @@ export const SelectStyles = css`
 	.select--currency {
 		width: 5.625rem;
 	}
+
+	@media screen and (max-width: 560px) {
+		:host {
+			max-width: 100%;
+		}
+	}
 `;

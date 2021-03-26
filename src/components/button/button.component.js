@@ -13,15 +13,21 @@ class Button extends LitElement {
 			buttonText: { type: String },
 		};
 	}
+
 	constructor() {
 		super();
-		this.isMobile = window.innerWidth > 767 ? false : true;
+		this.isMobile = window.innerWidth > 560 ? false : true;
 		this.backgroundColor = "";
 		this.buttonText = "";
 	}
+
 	render() {
 		return html`
-			<button class="button" style="background-color: ${this.backgroundColor}">
+			<button
+				class="${this.isMobile ? "button button--mobile" : "button"}"
+				style="background-color: ${this.backgroundColor}; border-color: ${this
+					.backgroundColor}"
+			>
 				${this.buttonText}
 			</button>
 		`;

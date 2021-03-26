@@ -22,7 +22,6 @@ export const PaymentFormStyles = css`
 		justify-content: center;
 		align-items: center;
 		position: relative;
-		padding-bottom: 2rem;
 	}
 
 	.payment-form__form {
@@ -85,7 +84,8 @@ export const PaymentFormStyles = css`
 
 	.payment-form__input {
 		box-sizing: border-box;
-		height: 2rem;
+		padding-top: 0.5rem;
+		padding-bottom: 0.4375rem;
 		border: 1px solid #bcd8db;
 		border-radius: 3px;
 		font-size: 0.75rem;
@@ -122,5 +122,39 @@ export const PaymentFormStyles = css`
 		flex-direction: row;
 		justify-content: flex-end;
 		width: 100%;
+		margin-top: 0.625rem;
+		box-sizing: border-box;
+	}
+
+	@media screen and (max-width: 560px) {
+		.payment-form__label {
+			flex-direction: column;
+			align-items: flex-start;
+			width: 100%;
+		}
+
+		.payment-form__label--amount {
+			margin-bottom: 0.625rem;
+		}
+
+		.payment-form__fieldset {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		.payment-form__input {
+			width: 100%;
+			margin-right: 0;
+			max-width: 100%;
+		}
+
+		.payment-form__label--description {
+			margin-top: 0.5rem;
+		}
+
+		.payment-form__buttons {
+			flex-direction: column;
+			margin-top: 1.25rem;
+		}
 	}
 `;
