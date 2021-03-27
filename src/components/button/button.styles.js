@@ -10,11 +10,18 @@ export const ButtonStyles = css`
 		padding: 0.5rem 1rem;
 		display: block;
 		border: 1px solid;
+		cursor: pointer;
 	}
 
 	.button--mobile {
 		width: 100%;
 		margin-left: 0;
 		margin-bottom: 0.625rem;
+	}
+
+	@media screen and (max-width: 560px) {
+		:host {
+			width: 100%;
+		}
 	}
 `;
