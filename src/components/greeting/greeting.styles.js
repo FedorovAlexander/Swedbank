@@ -20,7 +20,6 @@ export const GreetingStyles = css`
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
-		align-items: center;
 		position: relative;
 		padding: 1rem 0.625rem;
 	}
@@ -31,15 +30,17 @@ export const GreetingStyles = css`
 	}
 
 	.greeting__title {
-		font-family: var(--font-headline);
+		font-family: var(--font-main);
 		font-weight: 700;
 		margin: 0;
+		margin-top: 2rem;
 	}
 
 	.greeting__description {
 		font-size: 0.75rem;
 		font-family: var(--font-main);
 		line-height: 1.4;
+		margin-bottom: 1.25rem;
 	}
 
 	.greeting__links {
@@ -52,6 +53,8 @@ export const GreetingStyles = css`
 	.greeting__image {
 		margin-left: 0.625rem;
 		margin-right: 0.625rem;
+		display: flex;
+		justify-content: center;
 	}
 
 	.greeting__figure {
@@ -78,7 +81,44 @@ export const GreetingStyles = css`
 		height: 0;
 		border-left: 1.25rem solid transparent;
 		border-right: 1.25rem solid transparent;
-
 		border-top: 1.25rem solid #fdc129;
+	}
+
+	@media screen and (max-width: 767px) {
+		.greeting__wrapper {
+			flex-direction: column;
+		}
+	}
+
+	@media screen and (max-width: 560px) {
+		.greeting__wrapper {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		.greeting__content {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		.greeting__image {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		.greeting__description {
+			margin-bottom: 0rem;
+			margin-bottom: 0.125rem;
+		}
+
+		.greeting__links {
+			flex-direction: column;
+			width: 100%;
+		}
+
+		.greeting__links app-read-more-link {
+			width: 100%;
+			margin-bottom: 0.5rem;
+		}
 	}
 `;
