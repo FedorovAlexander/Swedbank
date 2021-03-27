@@ -1,9 +1,9 @@
-import '../../components/advantage/advantage.component';
-import '../../components/table/table.component';
+import "../../components/advantage/advantage.component";
+import "../../components/table/table.component";
 
-import { html, LitElement } from 'lit-element';
+import { html, LitElement } from "lit-element";
 
-import { HomePageStyles } from './home.styles';
+import { HomePageStyles } from "./home.styles";
 
 class Home extends LitElement {
 	static get styles() {
@@ -41,7 +41,7 @@ class Home extends LitElement {
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 								eiusmod tempor incididunt ut labore
 							</p>
-							<a href="#" class="home-page__advantage-link">Read more</a>
+							<app-read-more-link href="#"></app-read-more-link>
 						</app-advantage>
 
 						<app-advantage headerBackgroundColor="#C5569A" headerTitle="Simple">

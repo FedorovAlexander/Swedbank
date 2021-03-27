@@ -1,4 +1,4 @@
-import { css } from 'lit-element';
+import { css } from "lit-element";
 
 export const HomePageStyles = css`
 	.home-page {
@@ -41,32 +41,6 @@ export const HomePageStyles = css`
 		font-size: 0.75rem;
 		line-height: 1.5;
 		margin: 0;
-	}
-
-	.home-page__advantage-link {
-		position: relative;
-		display: inline-block;
-		font-size: 0.75rem;
-		color: var(--link-color);
-		margin-top: 0.5rem;
-		padding-left: 0.5rem;
-		cursor: pointer;
-	}
-
-	.home-page__advantage-link:hover {
-		text-decoration: none;
-	}
-
-	.home-page__advantage-link:before {
-		content: "";
-		position: absolute;
-		top: 1px;
-		left: 0;
-		width: 0;
-		height: 0;
-		border-top: 5px solid transparent;
-		border-bottom: 5px solid transparent;
-		border-left: 5px solid #257886;
 	}
 
 	.home-page__advantage-list {
