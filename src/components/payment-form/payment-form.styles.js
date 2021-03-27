@@ -127,6 +127,10 @@ export const PaymentFormStyles = css`
 	}
 
 	@media screen and (max-width: 560px) {
+		.payment-form__form {
+			max-width: 100%;
+		}
+
 		.payment-form__label {
 			flex-direction: column;
 			align-items: flex-start;
