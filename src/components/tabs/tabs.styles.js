@@ -1,4 +1,4 @@
-import { css } from 'lit-element';
+import { css } from "lit-element";
 
 export const TabsStyles = css`
 	:host {
@@ -51,6 +51,6 @@ export const TabsStyles = css`
 
 	.tabs__content {
 		width: 100%;
-		padding: 2.5rem 1.25rem 1.25rem;
+		padding: 1.25rem 1.25rem 1.25rem;
 	}
 `;
