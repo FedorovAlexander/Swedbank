@@ -79,6 +79,7 @@ class PaymentForm extends LitElement {
 								.options=${this.currency}
 								name="Currency"
 								?firstOptionSelected=${true}
+								defaultValue="EUR"
 							></app-select>
 						</fieldset>
 						<span id="error-amount" class="payment-form__error-message" hidden

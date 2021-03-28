@@ -13,6 +13,7 @@ class Select extends LitElement {
 			name: { type: String },
 			value: { type: String },
 			placeholder: { type: String },
+			defaultValue: { type: String },
 			error: { type: Boolean },
 			firstOptionSelected: { type: Boolean },
 			units: { type: String },
@@ -22,14 +23,15 @@ class Select extends LitElement {
 	constructor() {
 		super();
 		this.isMobile = window.innerWidth > 767 ? false : true;
-		this.options = [];
 		this.name = "";
-		this.value = this.options.length ? this.options[0] : "";
+		this.options = [];
 		this.placeholder = "";
 		this.error = false;
 		this.firstOptionSelected = false;
 		this.units = "";
 		this.inlineWidth = false;
+		this.defaultValue = " ";
+		this.value = this.defaultValue;
 	}
 	render() {
 		return html`
@@ -41,10 +43,16 @@ class Select extends LitElement {
 				<select
 					name="${this.name}"
 					class="${this.inlineWidth ? "select select--inline-width" : "select"}"
-					value="${this.value}"
+					value="${this.value ? this.defaultValue : this.value}"
 					@change=${this._selectChange}
 					style=${this.error ? "border-color: #d1434a" : ""}
 				>
+					<script>
+						function defaultValue() {
+							this.value = options[0];
+						}
+						defaultValue();
+					</script>
 					<option selected disabled ?hidden=${this.firstOptionSelected}>
 						${this.placeholder}${this.units}
 					</option>
@@ -54,6 +62,7 @@ class Select extends LitElement {
 								<option
 									class="payment-form__option"
 									value="${item}"
+									?default="${this.firstOptionSelected}"
 									?selected=${this.firstOptionSelected && index === 0}
 								>
 									<span class="payment-form__option-content"
@@ -70,6 +79,7 @@ class Select extends LitElement {
 	_selectChange() {
 		let select = this.shadowRoot.querySelector("select");
 		this.value = select.value;
+		this.defaultValue = select.value;
 	}
 }
 
