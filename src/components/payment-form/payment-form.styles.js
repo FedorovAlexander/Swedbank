@@ -22,6 +22,7 @@ export const PaymentFormStyles = css`
 		justify-content: center;
 		align-items: center;
 		position: relative;
+		padding-top: 1.25rem;
 	}
 
 	.payment-form__form {
