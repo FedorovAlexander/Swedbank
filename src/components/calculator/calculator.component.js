@@ -30,16 +30,12 @@ class Calculator extends LitElement {
 		this.rangeMax = 320000;
 		this.monthlyPayment = 0;
 	}
+
 	render() {
 		return html`
 			<section class="calculator">
 				<div class="calculator__wrapper">
-					<form
-						class="calculator__form"
-						@submit=${this.submitForm}
-						method="POST"
-						id="payment-form"
-					>
+					<div class="calculator__form" id="calculator">
 						<div class="calculator__inputs">
 							<div class="calculator__inputs-wrapper">
 								<div class="calculator__loan-size">
@@ -72,10 +68,12 @@ class Calculator extends LitElement {
 										Period
 										<app-select
 											.options=${this.period}
+											id="period"
 											name="Period"
 											?firstOptionSelected=${true}
 											?inlineWidth="${true}"
 											units=" years"
+											defaultValue="5"
 										></app-select>
 									</label>
 								</div>
@@ -88,6 +86,7 @@ class Calculator extends LitElement {
 											?firstOptionSelected=${true}
 											?inlineWidth="${true}"
 											units="%"
+											defaultValue="3.5"
 										></app-select>
 									</label>
 								</div>
@@ -109,14 +108,29 @@ class Calculator extends LitElement {
 								></app-button>
 							</div>
 						</div>
-					</form>
+					</div>
 				</div>
 			</section>
 		`;
 	}
 
 	_runCalculator(e) {
-		console.log("calculate");
+		const calculator = this.shadowRoot.getElementById("calculator");
+		const periodSelect = calculator.querySelector(
+			"app-select[name = 'Period']"
+		);
+		const interestSelect = calculator.querySelector(
+			"app-select[name = 'Interest']"
+		);
+		const loanSizeInput = calculator.querySelector("#loan-size");
+		let period = parseFloat(periodSelect.defaultValue);
+
+		let principal = parseFloat(loanSizeInput.value);
+		let interest = parseFloat(interestSelect.defaultValue) / 100 / 12;
+		let payments = parseFloat(period) * 12;
+
+		let x = Math.pow(1 + interest, payments);
+		this.monthlyPayment = ((principal * x * interest) / (x - 1)).toFixed(2);
 	}
 
 	_rangeChange(e) {
