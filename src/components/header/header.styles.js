@@ -1,4 +1,4 @@
-import { css } from 'lit-element';
+import { css } from "lit-element";
 
 export const HeaderStyles = css`
 	:host {
@@ -8,23 +8,23 @@ export const HeaderStyles = css`
 
 	.header {
 		display: flex;
-		flex-direction: column;
-		position: relative;
-		margin: 0 auto;
-		background-color: #fff;
-		font-family: var(--font-titles);
-		font-weight: 400;
 		z-index: 200;
+		position: relative;
+		flex-direction: column;
+		margin: 0 auto;
+		font-weight: 400;
+		font-family: var(--font-titles);
+		background-color: #fff;
 	}
 
 	.header:after {
-		content: "";
 		position: absolute;
-		height: 0.625rem;
 		top: 0;
 		right: 0;
 		bottom: 0;
 		left: 0;
+		height: 0.625rem;
+		content: "";
 		background: linear-gradient(to right, var(--brand-orange), #f4ba44);
 	}
 
@@ -48,21 +48,21 @@ export const HeaderStyles = css`
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
-		list-style: none;
-		padding: 0;
 		margin: 0;
+		padding: 0;
+		list-style: none;
 	}
 
 	.header__menu-item {
 		display: flex;
+		flex: 1;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		flex: 1;
-		text-align: center;
+		border-top: 2px solid #f1eeeb;
 		color: #000000;
 		font-weight: 500;
-		border-top: 2px solid #f1eeeb;
+		text-align: center;
 		transition: color 0.1s linear, border-top 0.1s linear;
 	}
 
@@ -71,19 +71,19 @@ export const HeaderStyles = css`
 	}
 
 	.header__menu-item:hover {
-		color: var(--brand-orange);
 		border-top: 2px solid var(--brand-orange);
+		color: var(--brand-orange);
 	}
 
 	.header__menu-item.active {
-		color: var(--brand-orange);
 		border-top: 2px solid var(--brand-orange);
+		color: var(--brand-orange);
 	}
 
 	.header__menu-item #home-icon,
 	.header__menu-item #banking-icon {
-		fill: #512b2b;
 		transition: fill 0.1s linear;
+		fill: #512b2b;
 	}
 
 	.header__menu-item:hover #home-icon,
@@ -111,14 +111,14 @@ export const HeaderStyles = css`
 
 	#overlay {
 		display: block;
+		opacity: 0.5;
+		z-index: 100;
 		position: fixed;
 		top: 0;
 		right: 0;
 		bottom: 0;
 		left: 0;
-		z-index: 100;
 		background-color: #a08f8f;
-		opacity: 0.5;
 		transition: opacity 0.1s linear;
 	}
 
@@ -128,37 +128,37 @@ export const HeaderStyles = css`
 	}
 
 	#nav-icon {
+		position: relative;
 		width: 1.25rem;
 		height: 0.9375rem;
-		position: relative;
-		-webkit-transform: rotate(0deg);
-		-moz-transform: rotate(0deg);
-		-o-transform: rotate(0deg);
-		transform: rotate(0deg);
+		cursor: pointer;
 		-webkit-transition: 0.5s ease-in-out;
 		-moz-transition: 0.5s ease-in-out;
 		-o-transition: 0.5s ease-in-out;
 		transition: 0.5s ease-in-out;
-		cursor: pointer;
-	}
-
-	#nav-icon span {
-		display: block;
-		position: absolute;
-		height: 0.1875rem;
-		width: 100%;
-		background: #512b2b;
-		border-radius: 3px;
-		opacity: 1;
-		left: 0;
 		-webkit-transform: rotate(0deg);
 		-moz-transform: rotate(0deg);
 		-o-transform: rotate(0deg);
 		transform: rotate(0deg);
+	}
+
+	#nav-icon span {
+		display: block;
+		opacity: 1;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 0.1875rem;
+		border-radius: 3px;
+		background: #512b2b;
 		-webkit-transition: 0.25s ease-in-out;
 		-moz-transition: 0.25s ease-in-out;
 		-o-transition: 0.25s ease-in-out;
 		transition: 0.25s ease-in-out;
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
 	}
 
 	#nav-icon span:nth-child(1) {
@@ -176,8 +176,8 @@ export const HeaderStyles = css`
 
 	#nav-icon.open span:nth-child(1) {
 		top: 0.375rem;
-		width: 0%;
 		left: 50%;
+		width: 0%;
 	}
 
 	#nav-icon.open span:nth-child(2) {
@@ -196,8 +196,8 @@ export const HeaderStyles = css`
 
 	#nav-icon.open span:nth-child(4) {
 		top: 0.375rem;
-		width: 0%;
 		left: 50%;
+		width: 0%;
 	}
 
 	@media screen and (max-width: 47.9375rem) {

@@ -2,15 +2,15 @@ import { css } from "lit-element";
 
 export const ReadMoreLinkStyles = css`
 	.read-more-link {
-		position: relative;
 		display: inline-block;
-		font-size: 0.75rem;
-		font-family: var(--font-main);
-		color: var(--link-color);
+		position: relative;
 		margin-top: 0.5rem;
 		padding-left: 0.5rem;
-		cursor: pointer;
+		color: var(--link-color);
+		font-size: 0.75rem;
+		font-family: var(--font-main);
 		text-decoration: none;
+		cursor: pointer;
 	}
 
 	.read-more-link:hover {
@@ -18,7 +18,6 @@ export const ReadMoreLinkStyles = css`
 	}
 
 	.read-more-link:before {
-		content: "";
 		position: absolute;
 		top: 2px;
 		left: 0;
@@ -27,5 +26,6 @@ export const ReadMoreLinkStyles = css`
 		border-top: 5px solid transparent;
 		border-bottom: 5px solid transparent;
 		border-left: 5px solid #257886;
+		content: "";
 	}
 `;

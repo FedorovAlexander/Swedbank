@@ -1,4 +1,4 @@
-import { css } from 'lit-element';
+import { css } from "lit-element";
 
 export const AdvantageStyles = css`
 	:host {
@@ -9,19 +9,19 @@ export const AdvantageStyles = css`
 
 	.advantage {
 		display: flex;
-		flex-direction: column;
 		flex: 1;
-		font-family: var(--font-main);
+		flex-direction: column;
 		height: 100%;
+		font-family: var(--font-main);
 	}
 
 	.advantage__header {
 		position: relative;
-		color: #fff;
-		font-weight: bold;
-		padding: 0.75rem 0.625rem;
 		flex: 1;
 		flex-grow: 0;
+		padding: 0.75rem 0.625rem;
+		color: #fff;
+		font-weight: bold;
 	}
 
 	.advantage__header-decorator {
@@ -31,15 +31,15 @@ export const AdvantageStyles = css`
 		left: 20px;
 		width: 0;
 		height: 0;
-		border-left: 13px solid transparent;
 		border-right: 13px solid transparent;
+		border-left: 13px solid transparent;
 	}
 
 	.advantage__content {
+		flex: 1;
+		min-height: 70px;
 		padding: 1.5rem 0.625rem 0.75rem;
 		background-color: #fbf2ea;
-		min-height: 70px;
-		flex: 1;
 	}
 
 	@media screen and (max-width: 767px) {

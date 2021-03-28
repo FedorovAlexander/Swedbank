@@ -10,23 +10,23 @@ export const NavLinkStyles = css`
 	.nav-link {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
 		justify-content: center;
-		text-decoration: none;
-		color: inherit;
+		align-items: center;
 		width: 100%;
+		color: inherit;
 		text-align: center;
+		text-decoration: none;
 	}
 
 	.nav-link--align-left {
 		display: flex;
 		flex-direction: row;
-		align-items: center;
 		justify-content: flex-start;
-		text-decoration: none;
-		color: inherit;
+		align-items: center;
 		width: 100%;
+		color: inherit;
 		text-align: center;
+		text-decoration: none;
 	}
 
 	.nav-link:hover {

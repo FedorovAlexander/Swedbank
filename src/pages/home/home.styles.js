@@ -3,9 +3,9 @@ import { css } from "lit-element";
 export const HomePageStyles = css`
 	.home-page {
 		display: block;
+		box-sizing: border-box;
 		width: 100%;
 		padding: 0 0.5rem;
-		box-sizing: border-box;
 	}
 
 	.home-page__wrapper {
@@ -22,32 +22,32 @@ export const HomePageStyles = css`
 		box-sizing: border-box;
 		width: 100%;
 		max-width: 1556px;
-		background-color: #fff;
-		border-radius: 3px;
 		margin-top: 0.625rem;
-		margin-bottom: 1.875rem;
 		margin-right: -0.625rem;
+		margin-bottom: 1.875rem;
 		margin-left: -0.625rem;
 		padding: 1.125rem 0.375rem;
+		border-radius: 3px;
+		background-color: #fff;
 	}
 
 	.home-page__advantage-title {
-		font-size: 0.75rem;
 		margin: 0;
 		margin-bottom: 0.5rem;
+		font-size: 0.75rem;
 	}
 
 	.home-page__advantage-text {
+		margin: 0;
 		font-size: 0.75rem;
 		line-height: 1.5;
-		margin: 0;
 	}
 
 	.home-page__advantage-list {
-		list-style: none;
-		padding-left: 0;
 		margin: 0;
 		margin-bottom: 1.875rem;
+		padding-left: 0;
+		list-style: none;
 		font-size: 0.75rem;
 	}
 
@@ -58,13 +58,13 @@ export const HomePageStyles = css`
 	}
 
 	.home-page__advantage-list-item:before {
-		content: "";
 		position: absolute;
 		top: 2px;
 		left: 0;
-		height: 10px;
 		width: 5px;
+		height: 10px;
 		border-radius: 0 10px 10px 0;
+		content: "";
 		background: #c5569a;
 	}
 

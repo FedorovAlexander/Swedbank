@@ -1,4 +1,4 @@
-import { css } from 'lit-element';
+import { css } from "lit-element";
 
 export const TableStyles = css`
 	:host {
@@ -9,10 +9,10 @@ export const TableStyles = css`
 		display: block;
 		width: 100%;
 		max-width: 1536px;
-		padding: 0 0.625rem;
-		background-color: #fff;
-		border-radius: 3px;
 		margin: 0 auto;
+		padding: 0 0.625rem;
+		border-radius: 3px;
+		background-color: #fff;
 	}
 
 	.table-block__wrapper {
@@ -24,12 +24,12 @@ export const TableStyles = css`
 	}
 
 	.table-block__title {
-		font-family: "Swedbank Headline";
-		font-size: 0.8125rem;
+		width: 100%;
 		margin-top: 1rem;
 		padding-left: 0.75rem;
+		font-size: 0.8125rem;
+		font-family: "Swedbank Headline";
 		text-align: left;
-		width: 100%;
 	}
 
 	.table-block__title-wrapper {
@@ -48,8 +48,8 @@ export const TableStyles = css`
 		align-items: center;
 		padding-left: 0;
 		list-style: none;
-		font-family: var(--font-main);
 		font-size: 0.75rem;
+		font-family: var(--font-main);
 	}
 
 	.table-block__download-link {
@@ -63,18 +63,18 @@ export const TableStyles = css`
 
 	.table-block__link-icon {
 		display: block;
-		height: 1.25rem;
 		width: 1.25rem;
-		border-radius: 50%;
+		height: 1.25rem;
 		margin-right: 0.25rem;
+		border-radius: 50%;
 		background-color: #32a3ae;
 		background-image: url("/assets/img/pdf.svg");
 	}
 
 	.table {
 		width: 100%;
-		font-family: var(--font-main);
 		border-collapse: collapse;
+		font-family: var(--font-main);
 	}
 
 	.table tbody {
@@ -86,10 +86,10 @@ export const TableStyles = css`
 	}
 
 	.table__row--total .table__cell {
+		padding-top: 1.25rem;
+		padding-bottom: 0.75rem;
 		border-bottom: none;
 		font-weight: 700;
-		padding-bottom: 0.75rem;
-		padding-top: 1.25rem;
 		vertical-align: baseline;
 	}
 
@@ -100,9 +100,9 @@ export const TableStyles = css`
 	}
 
 	.table__row--total .table__cell--total-available {
-		font-family: var(--font-titles);
-		font-size: 1.25rem;
 		font-weight: 400;
+		font-size: 1.25rem;
+		font-family: var(--font-titles);
 	}
 
 	.table__cell:not(:first-child),
@@ -111,25 +111,25 @@ export const TableStyles = css`
 	}
 
 	.table__cell:first-child {
-		text-align: left;
 		padding-left: 0.5rem;
+		text-align: left;
 	}
 
 	.table__cell:last-child {
-		text-align: right;
 		padding-right: 0.5rem;
+		text-align: right;
 	}
 
 	.table__head {
-		background-color: #e9f7fb;
-		font-size: 0.825rem;
-		font-weight: 400;
 		padding: 0.625rem;
+		font-weight: 400;
+		font-size: 0.825rem;
+		background-color: #e9f7fb;
 	}
 
 	.table__head:first-child {
-		text-align: left;
 		padding-left: 0.5rem;
+		text-align: left;
 	}
 
 	.table__head:last-child {
@@ -163,8 +163,8 @@ export const TableStyles = css`
 		.table__cell--available {
 			display: block;
 			flex: 1;
-			word-break: keep-all;
 			white-space: nowrap;
+			word-break: keep-all;
 		}
 
 		.table__cell--name {

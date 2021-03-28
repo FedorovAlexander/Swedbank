@@ -1,11 +1,11 @@
-import { css } from 'lit-element';
+import { css } from "lit-element";
 
 export const BankingPageStyles = css`
 	.banking-page {
 		display: block;
+		box-sizing: border-box;
 		width: 100%;
 		padding: 0 0.5rem;
-		box-sizing: border-box;
 	}
 
 	.banking__wrapper {

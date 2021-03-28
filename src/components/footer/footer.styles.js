@@ -7,18 +7,18 @@ export const FooterStyles = css`
 
 	.footer {
 		position: relative;
-		background-color: #ebe7e2;
 		padding: 0 0.5em;
+		background-color: #ebe7e2;
 	}
 
 	.footer:before {
-		content: "";
 		position: absolute;
-		height: 0.3125rem;
 		top: 0;
 		right: 0;
 		bottom: 0;
 		left: 0;
+		height: 0.3125rem;
+		content: "";
 		background: linear-gradient(to right, var(--brand-orange), #f4ba44);
 	}
 
@@ -44,9 +44,9 @@ export const FooterStyles = css`
 
 	.footer__links-block {
 		display: flex;
+		flex: 3;
 		flex-direction: row;
 		justify-content: space-between;
-		flex: 3;
 	}
 
 	.footer__links-section {
@@ -54,11 +54,11 @@ export const FooterStyles = css`
 	}
 
 	.footer__title {
-		font-family: var(--font-titles);
-		font-weight: 500;
-		font-size: 1.125rem;
 		margin-top: 0;
 		margin-bottom: 0.75rem;
+		font-weight: 500;
+		font-size: 1.125rem;
+		font-family: var(--font-titles);
 	}
 
 	.footer__title--contact {
@@ -80,7 +80,6 @@ export const FooterStyles = css`
 	}
 
 	.footer__link:before {
-		content: "";
 		position: absolute;
 		top: calc(50% - 7px);
 		left: 0;
@@ -89,11 +88,12 @@ export const FooterStyles = css`
 		border-top: 6px solid transparent;
 		border-bottom: 6px solid transparent;
 		border-left: 6px solid #512b2b;
+		content: "";
 	}
 
 	.footer__link > nav-link {
-		padding: 0.375rem 0;
 		width: fit-content;
+		padding: 0.375rem 0;
 	}
 
 	.footer__link nav-link:hover {
@@ -101,31 +101,31 @@ export const FooterStyles = css`
 	}
 
 	.footer__phone-link {
-		font-family: var(--font-headline);
-		font-size: 2rem;
 		color: var(--brand-orange);
+		font-size: 2rem;
+		font-family: var(--font-headline);
 		text-decoration: none;
 	}
 
 	.footer__email-link {
 		display: block;
-		font-family: var(--font-main);
-		color: var(--link-color);
 		margin-top: 0.75rem;
 		margin-bottom: 1.25rem;
+		color: var(--link-color);
+		font-family: var(--font-main);
 	}
 
 	.footer__contacts-item {
-		font-family: var(--font-main);
 		margin-bottom: 0.125rem;
+		font-family: var(--font-main);
 	}
 
 	.footer__socials-list {
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-start;
-		list-style: none;
 		padding-left: 0;
+		list-style: none;
 	}
 
 	.footer__socials-item {
@@ -134,26 +134,26 @@ export const FooterStyles = css`
 
 	.footer__socials-link {
 		display: block;
-		height: 1.5rem;
 		width: 1.5rem;
+		height: 1.5rem;
 		border-radius: 50%;
-		background-position: center;
 		background-repeat: no-repeat;
+		background-position: center;
 	}
 
 	.footer-disclaimer {
-		background-color: #ffffff;
 		padding: 1.5rem 0;
+		background-color: #ffffff;
 	}
 
 	.footer-disclaimer-text {
-		font-family: "Arial";
-		font-size: 0.8125rem;
-		color: gray;
-		text-align: center;
-		line-height: 1.3;
 		max-width: 60.625rem;
 		margin: 0 auto;
+		color: gray;
+		font-size: 0.8125rem;
+		line-height: 1.3;
+		font-family: "Arial";
+		text-align: center;
 	}
 
 	@media screen and (max-width: 767px) {
@@ -163,15 +163,15 @@ export const FooterStyles = css`
 
 		.footer__wrapper {
 			flex-direction: column;
-			padding-left: 0;
 			padding-right: 0;
+			padding-left: 0;
 		}
 
 		.footer__title,
 		.footer__list,
 		.footer__socials-links {
-			padding-left: 1.5rem;
 			padding-right: 1.5rem;
+			padding-left: 1.5rem;
 		}
 
 		.footer__title {
@@ -183,8 +183,8 @@ export const FooterStyles = css`
 		}
 
 		.footer__contacts {
-			border-bottom: 2px solid #ddcdc4;
 			padding: 0;
+			border-bottom: 2px solid #ddcdc4;
 		}
 
 		.footer__links-block {
@@ -194,29 +194,29 @@ export const FooterStyles = css`
 
 		.footer__links-section {
 			position: relative;
-			border-bottom: 2px solid #ddcdc4;
 			padding: 1rem 0;
+			border-bottom: 2px solid #ddcdc4;
 			cursor: pointer;
 		}
 
 		.footer__links-section:after {
-			content: "";
 			display: block;
 			position: absolute;
-			border-style: solid;
-			border-width: 3px 3px 0 0;
-			border-color: var(--brand-orange);
-			height: 8px;
-			width: 8px;
-			right: 1.5rem;
 			top: 1.125rem;
+			right: 1.5rem;
+			width: 8px;
+			height: 8px;
+			border-width: 3px 3px 0 0;
+			border-style: solid;
+			border-color: var(--brand-orange);
+			content: "";
 			transform: rotate(135deg);
 		}
 
 		.footer__links-section.js-show:after {
 			top: 1.5rem;
-			transform: rotate(-45deg);
 			border-color: inherit;
+			transform: rotate(-45deg);
 		}
 
 		.footer__title--list {
