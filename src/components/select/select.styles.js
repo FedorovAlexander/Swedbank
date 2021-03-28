@@ -59,5 +59,13 @@ export const SelectStyles = css`
 		:host {
 			max-width: 100%;
 		}
+
+		.select-wrapper--inline-width {
+			display: flex;
+		}
+
+		.select--inline-width {
+			width: 100%;
+		}
 	}
 `;

@@ -208,4 +208,67 @@ export const CalculatorStyles = css`
 		font-size: 0.75rem;
 		color: #808080;
 	}
+
+	@media screen and (max-width: 767px) {
+		.calculator__form {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+
+		.calculator__inputs {
+			border-right: none;
+		}
+	}
+
+	@media screen and (max-width: 560px) {
+		.calculator {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		.calculator__wrapper {
+			padding-bottom: 1rem;
+		}
+
+		.calculator__inputs-wrapper {
+			margin-right: 0;
+		}
+
+		.calculator__label {
+			flex-direction: column;
+			align-items: flex-start;
+			width: 100%;
+		}
+
+		.calculator__inputs {
+			border-right: none;
+		}
+
+		.calculator__result {
+			padding-left: 0;
+		}
+
+		.calculator__label app-select {
+			margin-left: 0;
+		}
+
+		.calculator__range {
+			margin-left: 0;
+			margin-top: 0.5rem;
+			max-width: 100%;
+		}
+
+		.calculator__range-values {
+			max-width: 100%;
+		}
+
+		.calculator__loan-value {
+			margin-left: 0;
+			max-width: 100%;
+			width: 100%;
+			text-align: right;
+		}
+	}
 `;
