@@ -1,6 +1,6 @@
-import { html, LitElement } from 'lit-element';
+import { html, LitElement } from "lit-element";
 
-import { FooterStyles } from './footer.styles';
+import { FooterStyles } from "./footer.styles";
 
 class Footer extends LitElement {
 	static get styles() {
@@ -136,7 +136,7 @@ class Footer extends LitElement {
 									<ul class="footer__list footer__list--links">
 										${item.linksList.map(
 											(item) => html`<li class="footer__link">
-												<nav-link href="${item.href}">
+												<nav-link href="${item.href}" alignLeft=${true}>
 													${item.linkTitle}
 												</nav-link>
 											</li>`

@@ -1,7 +1,7 @@
-import { html, LitElement } from 'lit-element';
-import { navigator } from 'lit-element-router';
+import { html, LitElement } from "lit-element";
+import { navigator } from "lit-element-router";
 
-import { NavLinkStyles } from './nav-link.styles';
+import { NavLinkStyles } from "./nav-link.styles";
 
 class NavLink extends navigator(LitElement) {
 	static get styles() {
@@ -10,15 +10,21 @@ class NavLink extends navigator(LitElement) {
 	static get properties() {
 		return {
 			href: { type: String },
+			alignLeft: { type: Boolean },
 		};
 	}
 	constructor() {
 		super();
 		this.href = "";
+		this.alignLeft = false;
 	}
 	render() {
 		return html`
-			<a class="nav-link" href="${this.href}" @click="${this.handleClick}">
+			<a
+				class=${this.alignLeft ? "nav-link nav-link--align-left" : "nav-link"}
+				href="${this.href}"
+				@click="${this.handleClick}"
+			>
 				<slot></slot>
 			</a>
 		`;

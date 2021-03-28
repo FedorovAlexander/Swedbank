@@ -1,4 +1,4 @@
-import { css } from 'lit-element';
+import { css } from "lit-element";
 
 export const NavLinkStyles = css`
 	:host {
@@ -12,6 +12,17 @@ export const NavLinkStyles = css`
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		text-decoration: none;
+		color: inherit;
+		width: 100%;
+		text-align: center;
+	}
+
+	.nav-link--align-left {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
 		text-decoration: none;
 		color: inherit;
 		width: 100%;
