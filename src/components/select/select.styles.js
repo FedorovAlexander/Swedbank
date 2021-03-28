@@ -5,10 +5,13 @@ export const SelectStyles = css`
 		flex: 1;
 		max-width: 18.75rem;
 		width: 100%;
+	}
+
+	.select-wrapper {
 		position: relative;
 	}
 
-	:host:after {
+	.select-wrapper:after {
 		content: "";
 		position: absolute;
 		height: 0.75rem;
@@ -19,6 +22,10 @@ export const SelectStyles = css`
 		background-image: url("/assets/img/up-down.svg");
 		background-size: cover;
 		background-repeat: no-repeat;
+	}
+
+	.select-wrapper--inline-width {
+		display: inline-block;
 	}
 
 	select {
@@ -35,7 +42,13 @@ export const SelectStyles = css`
 		border-radius: 3px;
 		font-size: 0.75rem;
 		padding-left: 0.625rem;
+		padding-right: 0.625rem;
 		width: 100%;
+	}
+
+	.select--inline-width {
+		width: auto;
+		padding-right: 1.5rem;
 	}
 
 	.select--currency {

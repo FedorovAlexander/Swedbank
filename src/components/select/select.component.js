@@ -15,6 +15,8 @@ class Select extends LitElement {
 			placeholder: { type: String },
 			error: { type: Boolean },
 			firstOptionSelected: { type: Boolean },
+			units: { type: String },
+			inlineWidth: { type: Boolean },
 		};
 	}
 	constructor() {
@@ -26,32 +28,42 @@ class Select extends LitElement {
 		this.placeholder = "";
 		this.error = false;
 		this.firstOptionSelected = false;
+		this.units = "";
+		this.inlineWidth = false;
 	}
 	render() {
 		return html`
-			<select
-				name="${this.name}"
-				class="select"
-				value="${this.value}"
-				@change=${this._selectChange}
-				style=${this.error ? "border-color: #d1434a" : ""}
+			<div
+				class="${this.inlineWidth
+					? "select-wrapper select-wrapper--inline-width"
+					: "select-wrapper"}"
 			>
-				<option selected disabled ?hidden=${this.firstOptionSelected}>
-					${this.placeholder}
-				</option>
-				${this.options.map(
-					(item) =>
-						html`
-							<option
-								class="payment-form__option"
-								value="${item}"
-								?selected=${this.firstOptionSelected}
-							>
-								<span class="payment-form__option-content">${item}</span>
-							</option>
-						`
-				)}
-			</select>
+				<select
+					name="${this.name}"
+					class="${this.inlineWidth ? "select select--inline-width" : "select"}"
+					value="${this.value}"
+					@change=${this._selectChange}
+					style=${this.error ? "border-color: #d1434a" : ""}
+				>
+					<option selected disabled ?hidden=${this.firstOptionSelected}>
+						${this.placeholder}${this.units}
+					</option>
+					${this.options.map(
+						(item, index) =>
+							html`
+								<option
+									class="payment-form__option"
+									value="${item}"
+									?selected=${this.firstOptionSelected && index === 0}
+								>
+									<span class="payment-form__option-content"
+										>${item}${this.units}</span
+									>
+								</option>
+							`
+					)}
+				</select>
+			</div>
 		`;
 	}
 
