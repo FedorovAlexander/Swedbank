@@ -1,6 +1,6 @@
-import { html, LitElement } from "lit-element";
+import { html, LitElement } from 'lit-element';
 
-import { SelectStyles } from "./select.styles";
+import { SelectStyles } from './select.styles';
 
 class Select extends LitElement {
 	static get styles() {
@@ -30,7 +30,7 @@ class Select extends LitElement {
 		this.firstOptionSelected = false;
 		this.units = "";
 		this.inlineWidth = false;
-		this.defaultValue = " ";
+		this.defaultValue = "";
 		this.value = this.defaultValue;
 	}
 	render() {

@@ -1,9 +1,9 @@
-import "../../components/button/button.component";
-import "../../components/select/select.component";
+import '../../components/button/button.component';
+import '../../components/select/select.component';
 
-import { html, LitElement } from "lit-element";
+import { html, LitElement } from 'lit-element';
 
-import { PaymentFormStyles } from "./payment-form.styles";
+import { PaymentFormStyles } from './payment-form.styles';
 
 const Accounts = ["Siim Tamm", "Marju Lepik", "Lina Roosipõld"];
 const SavedPayments = ["Saved payment 1", "Saved payment 2", "Saved payment 3"];
